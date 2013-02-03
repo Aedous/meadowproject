@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <Tobi Harper> -- <Developer> -- <www.stemconcepts.co.uk>
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, CSS, PHP
+    Normalize.css, jQuery, Modernizr
