@@ -94,7 +94,114 @@ textarea {
    ========================================================================== */
 
 
+.bg-blue
+{
+    background-color:blue;
+}
+.bg-red
+{
+    background-color:red;
+}
+.bg-yellow
+{
+    background-color:yellow;
+}
+.bg-green
+{
+    background-color:green;
+}
+.bg-black
+{
+    background-color:black;
+}
+.bg-gray
+{
+    background-color:gray;
+}
 
+/* Main helper styles ------ */
+.error
+{
+    border:1px solid red;
+}
+
+.hide
+{
+    display:none;
+}
+
+.parent-floater
+{
+    position:relative;
+}
+
+.floater
+{
+    /* used for floating objects */
+    position:absolute;
+}
+
+.fixed-floater
+{
+    position:fixed;
+}
+
+.left
+{
+    float:left;
+}
+
+.right
+{
+    float:right;
+}
+
+.container 
+{
+    width:100%;
+    height:100%;
+    margin:0px auto;
+    padding:0px;
+}
+
+#main_controller
+{
+    overflow:hidden;
+}
+
+#layer_controller
+{
+     width:2280px; /* largest and longest layer */
+     height:100%;
+     margin:0px 0px 0px 0px;
+     padding:0px 0px 0px 0px;
+}
+
+#page_controller
+{
+    width: 99999px;
+    height: 100%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.background-slider-static 
+{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.background-image, .background-image-static
+{
+    width:100%;
+}
+
+
+
+/* ---------------------- */
 
 
 
