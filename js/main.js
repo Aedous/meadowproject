@@ -20,6 +20,11 @@ jQuery(document).ready(function($)
 	//Start script here
 	//initNavigation($, navigationitems);
 	//initBackground($, backgrounditems);
+
+	$('#navigation-buttons li a').click(function (e) {
+  		e.preventDefault();
+  		$(this).tab('show');
+	});
 });
 
 jQuery(window).load(function()
@@ -31,12 +36,17 @@ jQuery(window).load(function()
 	window_height = $(window).height();
 	padding = 10;
 	$(home).data('loaded', false);
+	ResizeAllPages($, ".main-page", -1, window_height, 0);
+	ResizeAllPages($, ".parallax-layer", -1, window_height, 0);
+	ResizeAllPages($, ".parallax-viewport", window_width, window_height, 0); 
+	ResizeAllPages($, ".resizeheight", -1, window_height, 0);
+	//ResizeAllPages($, "[class^='container']", -1, window_height, 0);
 
 	//Loading of page resize things we need to and update page
 	//Resize all pages
 	//ResizeAllPages($, ".page", window_width, window_height, padding);
-	ResizeAllPages($, ".main-page", window_width, window_height, 0);
-	ResizeAllPages($, ".layer", -1, window_height, 0);
+	
+	/*ResizeAllPages($, ".layer", -1, window_height, 0);
 	//ResizePage($, ".background-slider-static", window_width, window_height, padding);
 	/*MovePageController($, "#" + current_main_page, 
 					GetPageWidth($,"#" + current_main_page),
@@ -48,8 +58,11 @@ jQuery(window).load(function()
 		window_height = GetWindowHeight($);
 
 		//Resize all pages
-		ResizeAllPages($, ".main-page", window_width, window_height, 0);
-		ResizeAllPages($, ".layer", -1, window_height, 0);
+		ResizeAllPages($, ".main-page", -1, window_height, 0);
+		ResizeAllPages($, ".parallax-layer", -1, window_height, 0);
+		ResizeAllPages($, ".parallax-viewport", window_width, window_height, 0);
+		ResizeAllPages($, ".resizeheight", -1, window_height, 0);
+		//ResizeAllPages($, "[class^='container']", -1, window_height, 0);
 		//ResizeAllPages($, ".page", window_width, window_height, padding);
 		//ResizePage($, ".background-slider-static", window_width, window_height, padding);
 		/*MovePageController($, "#" + current_main_page, 

@@ -3,6 +3,6 @@
 ?>
 <div class="layer floater">
 	<div class="layer-background-image">
-		<img src="img/meadowbg.jpg" border="0" />
+		<img src="img/small_front_grass.jpg" border="0" />
 	</div>
 </div>

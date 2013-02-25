@@ -13,32 +13,62 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <div id="main_controller" class="container main-page bg-blue">
-            <!-- Pages and content -->
-            <?php include("views/pagestructure.php"); ?>
-            <?php include("views/layerstructure.php"); ?>
+        <div id="main_controller" class="container main-page bg-blue" style="display:block;">
+
+            <!-- normal page content is controlled here -->
+            <?php //include('views/pagestructure.php'); ?>
+            <!-- end of normal page content -->
+
+
+            <!-- layers and plants are created in this file -->
+            <?php include('views/layerstructure.php'); ?>
+            <!-- end of layers and plants -->
+
+
+
+
         </div><!-- #main_controller -->
-
-
         <!-- Add your site or application content here -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+        <!--
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+    -->
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
+        <script src="js/jquery.parallax.min.js"></script>
         
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
+        <script type="text/javascript">
             /*
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
             */
+            jQuery(document).ready(function(){
+                            // Declare parallax on layers
+                            jQuery('.parallax-layer').parallax({
+                                mouseport: jQuery('.parallax-viewport'),
+                                yparallax: false,
+                                xorigin: 'middle'
+                            });
+
+                            jQuery('.plant').popover({
+                                animation : true,
+                                trigger: 'hover'
+                            });
+
+                            
+                        });
         </script>
     </body>
 </html>
